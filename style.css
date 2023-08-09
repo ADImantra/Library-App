@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -6,7 +10,10 @@ body {
 }
 
 .addBookCard {
-
+    display: none;
+    position: sticky;
+    z-index: 1;
+    padding-top: 100px;
 }
 
 .header {
@@ -16,11 +23,17 @@ body {
 #book-form {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     gap: 10px;
 }
 
 #book-form .input-group {
 
+}
+
+#book-form .submitBtn {
+    width: 100%;
 }
 
 .library-list {

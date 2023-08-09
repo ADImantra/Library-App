@@ -7,32 +7,34 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+
+    </header>
     <div class="addBookCard">
-        <h1 class="header">
-            My Book List
-        </h1>
         <form action="" id="book-form">
+            <h1>My Book List</h1>
             <div class="input-group">
-                <label for="title">Title*</label>
-                <input type="text" name="title" id="title" required>
+                <input type="text" name="title" id="title" placeholder="Title" required>
             </div>
             <div class="input-group">
-                <label for="author">Author*</label>
-                <input type="text" name="author" id="author" required>
+                <input type="text" name="author" id="author" placeholder="Author" required>
             </div>
             <div class="input-group">
-                <label for="isbn">ISBN*</label>
-                <input type="text" name="isbn" id="isbn" required>
+                <input type="text" name="isbn" id="isbn" placeholder="ISBN" required>
             </div>
             <div class="input-group">
-                <label for="synopsis">Synopsis</label>
-                <Textarea id="synopsis" name="synopsis" placeholder="A brief description of the book..."></Textarea>
+                <Textarea id="synopsis" name="synopsis" cols="30" rows="8" placeholder="A brief description of the book..."></Textarea>
             </div>
             <button type="submit" class="submitBtn">Add a Book</button>
         </form>
     </div>
-    <div class="library-list">
-    </div>
+    <main>
+        <button class="add-book">Add a Book?</button>
+        <div class="library-list"></div>
+    </main>
+    <footer>
+
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>

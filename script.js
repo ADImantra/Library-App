@@ -5,21 +5,26 @@ let libraryArray = [
 
 
 ]
+document.addEventListener(`DOMContentLoaded`, () => {
+    render()
+})
 
+const addBookCard = document.querySelector(`.addBookCard`)
 const $title = document.querySelector(`#title`);
 const $author = document.querySelector(`#author`);
 const $isbn = document.querySelector(`#isbn`);
 const $synopsis = document.querySelector(`#synopsis`);
 const libList = document.querySelector(`.library-list`);
 
-document.addEventListener(`DOMContentLoaded`, () => {
-    render()
+const bookAdd = document.querySelector(`.add-book`).addEventListener(`click`, () => {
+    addBookCard.style.display = `Flex`
 })
 
 const submitForm = document.querySelector(`form`).addEventListener("submit", (e) => {
     e.preventDefault();
     addBook();
     render();
+    addBookCard.style.display = `None`
 });
 
 class Book {
@@ -37,7 +42,8 @@ function addBook() {
         $isbn.value.length === 0) 
         {
             alert(`Please Fill out Required Fields`)
-        }else{
+
+        } else {
             const newBook = new Book($title.value, 
                                      $author.value, 
                                      $isbn.value, 
@@ -82,7 +88,8 @@ To Do List:
     [] Make "Add Book" seperate form that only appears when 
     brought up by user
 
-    [] Use grid to make book cards, displaying status of books
+    [X] Use grid to make book cards, displaying status of books
 
-    
+    [] Make it pretty with more CSS
+
 */
